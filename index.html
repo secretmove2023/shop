@@ -1,13 +1,282 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
+
 <head>
-    <base target="_top">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop</title>
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>แบบฟอร์มสั่งซื้อสินค้า
+  </title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:wght@300&display=swap');
+  </style>
+
+  <head>
+    <base target="_blank">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>สั่งซื้อสินค้า
+    </title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <style>
+      .prompt {
+        font-family: 'Prompt', sans-serif;
+      }
+
+      body {
+        font-family: 'Prompt' !important;
+      }
+
+      .form-error {
+        color: #D8000C;
+
+        .disclaimer {
+          width: 480px;
+          color: #646464;
+          margin: 20px auto;
+          padding: 0 16px;
+          text-align: center;
+          font: 400 12px Roboto, Helvetica, Arial, sans-serif
+        }
+
+        .content {
+          max-width: 500px;
+          margin: auto;
+        }
+
+        .disclaimer a {
+          color: #009688
+        }
+
+        #credit {
+          display: none
+        }
+    </style>
+  </head>
+
 <body>
-    <iframe style="width: 100%; height: 100vh;" scrolling="yes" src="https://script.google.com/macros/s/AKfycbxz5eri-ib8iQRKdoe7sAnb_3g9vanRrNhhMEYGDZoRf3P8wSYlPrlMIMscvKD9V1Ax4g/exec" frameborder="0"></iframe>
+  <div class="container">
+
+    <div class="content">
+      <div class="col s12 m5">
+        <div class="card-panel ">
+
+          <nav class=teal>
+            <div class="nav-wrapper" style="max-width: 480px;margin: 40px auto;">
+              <a class="brand-logo center">แบบฟอร์มสั่งซื้อสินค้า</a>
+              <ul id="nav-mobile" class="left hide-on-med-and-down">
+              </ul>
+            </div>
+
+          </nav>
+
+
+          <form class="main" id="myForm">
+            <div id="forminner">
+              <div class="row">
+                <div class="col s12">
+                  <h5 class="center-align teal-text" style="margin-top: 36px;">ชื่อสินค้า XXX YY</h5>
+                  <!-- <p class="disclaimer">กรอกข้อมูลให้ครบสมบูรณ์ทุกช่อง.</p> -->
+                </div>
+              </div>
+              <div class="center-align">
+                <img src="https://scontent.fbkk9-2.fna.fbcdn.net/v/t39.30808-6/354228297_215451198066505_6591420683644316189_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=DYf0mYOQShUAX-4ehk_&_nc_ht=scontent.fbkk9-2.fna&oh=00_AfCfzvulJUwOa2mNE1UeFQeqIRbGN4N615ZkwN_PFo5jTA&oe=655E8F40" alt="" width="100%" >
+              </div>
+              <br>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">account_box</i>
+                  <input id="name" type="text" name="Name" class="validate" required>
+                  <label for="name">ชื่อ สกุล</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">phone</i>
+                  <input id="tel" type="tel" name="Tel" class="validate" required >
+                  <label for="tel">เบอร์โทร</label>
+                </div>
+              </div>
+
+              <!-- <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input id="nickname" type="text" name="nickname" class="validate" required>
+                  <label for="nickname">ชื่อเล่น</label>
+                </div> -->
+
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">location_on</i>
+                  <textarea id="address" type="text" name="address" class="materialize-textarea validate" required ></textarea>
+                  <label for="address">ที่อยู่</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">contact_mail</i>
+                  <input id="email" type="text" name="Email" >
+                  <label for="email">ช่องทางการติดต่ออื่นๆ เช่น Facebook</label>
+                </div>
+              </div>
+
+              <div class="center-align">
+                <img src="https://scontent.fbkk13-2.fna.fbcdn.net/v/t39.30808-6/350798097_1009231120072079_1012725422592845843_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=LJ1Ih39FgBsAX_s5-kb&_nc_ht=scontent.fbkk13-2.fna&oh=00_AfBjV0aTDpLt_HzKICJvFFr2kYxIgxPOMq7kUzHm_tIBNg&oe=656027B8" alt="" width="100%" >
+              </div>
+
+              <br>
+
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">shopping_basket</i>
+                  <input id="number" type="text" name="number" class="materialize-textarea validate" required >
+                  <label for="number">จำนวนสินค้าที่ต้องการสั่งซื้อ</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">attach_money</i>
+                  <input id="baht" type="text" name="baht" class="materialize-textarea validate" required >
+                  <label for="baht">รวมยอดโอน</label>
+                </div>
+              </div>
+              
+              <div class="row">
+                <h6 class="center-align teal-text text-darken-2"> ชำระค่าสินค้าได้ที่
+                  <br> หมายเลขบัญชี xxxxxxxxxx ธนาคารกสิกรไทย
+                  <br> ชญาพร นามวงศ์
+                </h6>
+              </div>
+
+              <div class="row">
+                <div class="file-field input-field col s12">
+                  <div class="btn">
+                    <span>อัปโหลดสลิปโอนเงิน</span>
+                    <input id="files" type="file">
+                  </div>
+                  <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text" placeholder="เลือกไฟล์">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s12">
+                  <button class="btn waves-effect waves-light" type="submit">ยืนยันการสั่งซื้อ
+                <i class="material-icons right">shopping_cart</i></button>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s12" id="progress">
+                </div>
+              </div>
+            </div>
+
+            <div id="success" style="display:none">
+              <br><h5 class="center-align teal-text">ขอบคุณสำหรับการสั่งซื้อ</h5>
+              <p class="center-align">จัดส่งสินค้าภายในเดือนธันวาคม</p>
+              <p class="center-align"><a class="btn btn-large" onclick="restartForm()">กลับหน้าหลัก</a></p>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+  <script>
+    //Initialization materialize
+   document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, options);
+  });
+  //Initialization materialize
+
+		var file, reader = new FileReader();
+     reader.onloadend = function(e) {
+       if (e.target.error != null) {
+         showError("File " + file.name + " could not be read.");
+         return;
+       } else {
+         google.script.run
+           .withSuccessHandler(showSuccess)
+           .uploadFile(e.target.result, file.name, 
+           $('input#name').val(),
+           $('input#tel').val(), 
+           $('textarea#address').val(), 
+           $('input#email').val(),
+           $('input#number').val(),
+           $('input#baht').val());
+       }
+     };
+
+     function showSuccess(e) {
+       if (e === "success") {
+         $('#forminner').hide();
+         $('#success').show();
+
+      //--แสดง sweet alert 
+              Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'บันทึกข้อมูลของท่านเรียบร้อยแล้ว',
+        showConfirmButton: false,
+        timer: 2000
+      })
+      //--แสดง sweet alert -->
+       } else {
+         showError(e);
+       }
+     }
+
+     function restartForm() {
+     $('#myForm').trigger("reset");
+         $('#forminner').show();
+         $('#success').hide();
+         $('#progress').html("");
+       }
+
+     document.getElementById("myForm").addEventListener("submit",submitForm)
+
+     function submitForm() {
+
+       event.preventDefault()
+
+       var files = $('#files')[0].files;
+       if (files.length === 0) {
+         showError("เลือกไฟล์");
+         return;
+       }
+       file = files[0];
+       if (file.size > 1024 * 1024 * 5) {
+         showError("The file size should be < 5 MB. ");
+         return;
+       }
+       showMessage("กำลังทำการสั่งซื้อ...");
+       reader.readAsDataURL(file);
+     }
+
+     function showError(e) {
+       $('#progress').addClass('red-text').html(e);
+     }
+
+     function showMessage(e) {
+       $('#progress').removeClass('red-text').html(e);
+     }
+       $(document).ready(function() {
+       $('select').material_select();
+     });
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </body>
+
 </html>
